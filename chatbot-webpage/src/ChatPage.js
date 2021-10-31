@@ -1,11 +1,11 @@
 // import logo from './logo.svg';
-import './App.css';
+import './ChatPage.css';
 import Chatbot from "react-chatbot-kit";
 import config from "./chatbot/config";
 import ActionProvider from "./chatbot/ActionProvider";
 import MessageParser from "./chatbot/MessageParser";
 
-function App() {
+function ChatPage() {
   return (
     <div className="App">
       <header className="App-header">
@@ -19,4 +19,4 @@ function App() {
   );
 }
 
-export default App;
+export default ChatPage;

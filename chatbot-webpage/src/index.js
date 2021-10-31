@@ -1,12 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import ChatPage from './ChatPage';
+import PersonalityPage from './PersonalityPage';
 import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Switch>
+        <Route path="/personality-page">
+          <PersonalityPage />
+        </Route>
+        <Route path="/chat-page">
+          <ChatPage />
+        </Route>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
