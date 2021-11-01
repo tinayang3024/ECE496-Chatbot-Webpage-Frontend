@@ -8,12 +8,13 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+  Link,
+  Redirect,
 } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    {/* <Router>
       <Switch>
         <Route path="/personality-page">
           <PersonalityPage />
@@ -22,6 +23,36 @@ ReactDOM.render(
           <ChatPage />
         </Route>
       </Switch>
+    </Router> */}
+    {/* <ChatPage /> */}
+    {/* <PersonalityPage /> */}
+    <Router>
+      <div>
+        {/* <nav>
+          <ul>
+            <li>
+              <Link to="/personality-page">personality</Link>
+            </li>
+            <li>
+              <Link to="/chat-page">chat</Link>
+            </li>
+          </ul>
+        </nav> */}
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Route exact path="/">
+            <Redirect to="/personality-page" />
+        </Route>
+        <Switch>
+          <Route path="/personality-page">
+            <PersonalityPage />
+          </Route>
+          <Route path="/chat-page">
+            <ChatPage />
+          </Route>
+        </Switch>
+      </div>
     </Router>
   </React.StrictMode>,
   document.getElementById('root')

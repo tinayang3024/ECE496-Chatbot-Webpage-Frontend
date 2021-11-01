@@ -42,7 +42,6 @@ function PersonalityPage() {
                         onChange={handleChange}/>
                 </Box>
                 <br/>
-                
                 <Link to="/chat-page">
                     <Stack spacing={2} direction="row">
                         <Button variant="outlined">Talk with our AI Chatbot</Button>
