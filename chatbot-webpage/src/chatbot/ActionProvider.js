@@ -1,3 +1,4 @@
+
 // ActionProvider starter code
 class ActionProvider {
     constructor(createChatBotMessage, setStateFunc, createClientMessage) {
@@ -6,12 +7,13 @@ class ActionProvider {
         this.createClientMessage = createClientMessage;
     }
 
-    greet = () => {
-        const message = this.createChatBotMessage("Sorry, I am not connected to the backend yet :(");
+    greet = (message_text) => {
+        const message = this.createChatBotMessage(message_text);
         this.addMessageToState(message);
     };
 
     addMessageToState = (message) => {
+        console.log("what is this?" + JSON.stringify(message))
         this.setState((prevState) => ({
             ...prevState,
             messages: [...prevState.messages, message],

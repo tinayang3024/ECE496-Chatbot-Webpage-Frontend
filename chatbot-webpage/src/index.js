@@ -14,33 +14,12 @@ import {
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Router>
-      <Switch>
-        <Route path="/personality-page">
-          <PersonalityPage />
-        </Route>
-        <Route path="/chat-page">
-          <ChatPage />
-        </Route>
-      </Switch>
-    </Router> */}
-    {/* <ChatPage /> */}
-    {/* <PersonalityPage /> */}
+     {/* <ChatPage /> */}
     <Router>
       <div>
-        {/* <nav>
-          <ul>
-            <li>
-              <Link to="/personality-page">personality</Link>
-            </li>
-            <li>
-              <Link to="/chat-page">chat</Link>
-            </li>
-          </ul>
-        </nav> */}
-
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+        <Route exact path="/ECE496-Chatbot-Webpage-Frontend">
+            <Redirect to="/personality-page" />
+        </Route>
         <Route exact path="/">
             <Redirect to="/personality-page" />
         </Route>
