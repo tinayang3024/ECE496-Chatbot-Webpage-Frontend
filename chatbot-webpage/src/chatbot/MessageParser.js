@@ -26,7 +26,9 @@ class MessageParser {
     .then(data=>{{
         if (data != "") {
           console.log("bot input: " + data.text)
-          this.actionProvider.greet(data.text);
+          console.log("bot text_trans: ")
+          this.actionProvider.greet("Original: " + data.text);
+          this.actionProvider.greet("Paraphrased: " + data.text_trans);
         } else {
           this.actionProvider.greet("Sorry, my backend had some issue:(");
         }

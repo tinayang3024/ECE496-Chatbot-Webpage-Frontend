@@ -13,7 +13,7 @@ class ActionProvider {
     };
 
     addMessageToState = (message) => {
-        console.log("what is this?" + JSON.stringify(message))
+        // console.log("what is this?" + JSON.stringify(message))
         this.setState((prevState) => ({
             ...prevState,
             messages: [...prevState.messages, message],
