@@ -2,7 +2,6 @@
     margin: auto;
     width: 100%;
     margin-top: 200px;
-    /* margin: 10%; */
 }
 
 .inputs {
@@ -30,4 +29,24 @@
     height: 200px;
 }
 
+#redirect-button:link {
+    text-decoration: none;
+}
 
+#redirect-button {
+    color: #D0D5F2;
+    border: 3px solid #D0D5F2;
+}
+
+#redirect-button:hover {
+    color: #E2E7F6;
+    border: 3px solid #E2E7F6;
+}
+
+#control-label {
+    color: #E2E7F6;
+}
+
+.personality-page .css-ahj2mt-MuiTypography-root {
+    font-size: 1.5rem;
+}
