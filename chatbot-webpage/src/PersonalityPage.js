@@ -6,8 +6,6 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 // import UofT from './uoft_logo.png';
 import SendIcon from '@mui/icons-material/Send';
-// import { styled } from '@mui/material/styles';
-import styled, { css } from 'styled-components';
 import Switch from '@mui/material/Switch';
 import chatbot_logo from './chatbot.png';
 import {
@@ -16,12 +14,12 @@ import {
   } from "react-router-dom";
 import FormControlLabel from '@mui/material/FormControlLabel';
 
-function PersonalityPage() {
-    const [formal, setFormal] = React.useState(false);
+
+function PersonalityPage(props) {
     const [label, setLabel] = React.useState("Formal Chatbot");
     const handleChange = (event) => {
-        setFormal(!formal);
-        if (formal) {
+        props.setFormal(!props.formal);
+        if (props.formal) {
             setLabel("Formal Chatbot")
         } else {
             setLabel("Informal Chatbot")
@@ -43,7 +41,7 @@ function PersonalityPage() {
                     }}
                     control={
                         <Switch
-                        checked={formal}
+                        checked={props.formal}
                         onChange={handleChange}
                         name="style"
                         color="primary"

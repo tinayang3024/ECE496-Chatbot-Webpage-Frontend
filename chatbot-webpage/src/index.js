@@ -12,28 +12,60 @@ import {
   Redirect,
 } from "react-router-dom";
 
+// ReactDOM.render(
+//   <React.StrictMode>
+//      {/* <ChatPage /> */}
+//     <Router>
+//       <div>
+//         <Route exact path="/ECE496-Chatbot-Webpage-Frontend">
+//             <Redirect to="/personality-page" />
+//         </Route>
+//         <Route exact path="/">
+//             <Redirect to="/personality-page" />
+//         </Route>
+//         <Switch>
+//           <Route path="/personality-page">
+//             <PersonalityPage formal={formal} setFormal={setFormal}/>
+//           </Route>
+//           <Route path="/chat-page">
+//             <ChatPage formal={formal}/>
+//           </Route>
+//         </Switch>
+//       </div>
+//     </Router>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
+
+
+function Index() {
+  const [formal, setFormal] = React.useState(false);
+  return (
+    <React.StrictMode>
+      <Router>
+        <div>
+          <Route exact path="/ECE496-Chatbot-Webpage-Frontend">
+              <Redirect to="/personality-page" />
+          </Route>
+          <Route exact path="/">
+              <Redirect to="/personality-page" />
+          </Route>
+          <Switch>
+            <Route path="/personality-page">
+              <PersonalityPage formal={formal} setFormal={setFormal}/>
+            </Route>
+            <Route path="/chat-page">
+              <ChatPage formal={formal}/>
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </React.StrictMode>
+  )
+}
+
 ReactDOM.render(
-  <React.StrictMode>
-     {/* <ChatPage /> */}
-    <Router>
-      <div>
-        <Route exact path="/ECE496-Chatbot-Webpage-Frontend">
-            <Redirect to="/personality-page" />
-        </Route>
-        <Route exact path="/">
-            <Redirect to="/personality-page" />
-        </Route>
-        <Switch>
-          <Route path="/personality-page">
-            <PersonalityPage />
-          </Route>
-          <Route path="/chat-page">
-            <ChatPage />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  </React.StrictMode>,
+  <Index/>,
   document.getElementById('root')
 );
 
